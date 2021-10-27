@@ -5,9 +5,9 @@ function Box(props) {
   return (
     <>
       <div className={Style.BoxBg} onClick={props.handleOpenLight}>
-        <Light openList={props.openList} inx="0" dataInx={props.dataInx} />
-        <Light openList={props.openList} inx="1" dataInx={props.dataInx} />
-        <Light openList={props.openList} inx="2" dataInx={props.dataInx} />
+        <Light openList={props.openList} inx="0" />
+        <Light openList={props.openList} inx="1" />
+        <Light openList={props.openList} inx="2" />
       </div>
     </>
   );
@@ -47,7 +47,6 @@ function App() {
   };
   useEffect(() => {
     if (openList.length === 3) {
-
       setTimeout(() => {
         setOpenList([]);
       }, 1000);
